@@ -3,7 +3,6 @@ FROM ubuntu:latest
 MAINTAINER Pedro Hernandez <p.hernandezserrano@maastrichtuniversity.nl>
 
 RUN apt-get update && \
-    #easy_install pip
     apt-get -y install wget python-pip python2.7 python-dev python-matplotlib libblas3 liblapack3 libstdc++6 python-setuptools && \
     apt-get clean && \
     pip install --upgrade pip && \
