@@ -1,0 +1,4 @@
+turicreate
+ipython
+"ipython[notebook]"
+jupyter
