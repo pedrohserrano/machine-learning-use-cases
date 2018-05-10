@@ -1,7 +1,6 @@
 # Machine Learning Use Cases
 
 ![Docker](https://img.shields.io/badge/docker%20build-not%20auto-blue.svg)
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/pedrohserrano/machine-learning-use-cases/master)
 
 Disclaimer: All of the data are either totally public or made up, it turns out they are not for any commercial purpose.
 
