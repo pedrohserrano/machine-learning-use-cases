@@ -1,11 +1,13 @@
-FROM ubuntu:latest
+FROM debian:latest
 
 LABEL maintainer "Pedro Hernandez <p.hernandezserrano@maastrichtuniversity.nl>"
 
-RUN apt-get update && \
+# Set the locale
+ENV PYTHONIOENCODING=utf-8
+
+RUN apt-get update && \ 
     apt-get -y install wget python-pip python2.7 python-dev python-matplotlib libblas3 liblapack3 libstdc++6 python-setuptools && \
     apt-get clean && \
-    pip install --upgrade pip && \
     pip install turicreate ipython "ipython[notebook]" jupyter && \
     mkdir /root/notebooks
 
