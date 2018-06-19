@@ -32,3 +32,9 @@ Note: When you run the container the notebook is going to be activated, so you h
 To exit the container simply exit the kernel (after save your results) `ctrl + c` then to activate the container again
 
     docker start -ai turi
+
+## Optional
+
+It's possible to run a complete environment with different kernels, more info [here](https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook), note that this environment does not content turicreate.
+
+    docker run -it -p 8888:8888 -v "$PWD":/home/jovyan --name=jupyterlab jupyter/datascience-notebook start.sh jupyter lab
