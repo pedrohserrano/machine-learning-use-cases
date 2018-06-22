@@ -1,18 +1,17 @@
-FROM debian:latest
+FROM jupyter/datascience-notebook
 
 LABEL maintainer "Pedro Hernandez <p.hernandezserrano@maastrichtuniversity.nl>"
 
-# Set the locale
-ENV PYTHONIOENCODING=utf-8
+USER root
 
 RUN apt-get update && \ 
-    apt-get -y install wget python-pip python2.7 python-dev python-matplotlib libblas3 liblapack3 libstdc++6 python-setuptools && \
-    apt-get clean && \
-    pip install turicreate ipython "ipython[notebook]" jupyter && \
-    mkdir /root/notebooks
+    apt-get -y install wget python-pip libblas3 liblapack3 libstdc++6 python-setuptools && \
+    apt-get clean 
 
-WORKDIR /root/notebooks
+USER $NB_UID
+
+RUN pip install --process-dependency-links -U turicreate h5py keras
 
 EXPOSE 8888
 
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--allow-root", "--ip=0.0.0.0"]
+CMD ["start.sh", "jupyter", "lab", "--port=8888", "--no-browser", "--allow-root", "--ip=0.0.0.0"]

@@ -23,7 +23,7 @@ Build the Docker image
 
 Run the container
 
-    docker run -it -p 8888:8888 -v "$PWD"/notebooks:/root/notebooks/ --name=turi ml/turicreate
+    docker run -it -p 8888:8888 -v "$PWD":/home/jovyan --name=turi ml/turicreate
 
 Note: When you run the container the notebook is going to be activated, so you have to access the link is pop up on the console
 
