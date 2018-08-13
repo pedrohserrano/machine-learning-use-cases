@@ -1,6 +1,7 @@
 # Machine Learning Use Cases
 
 ![Docker](https://img.shields.io/badge/docker%20build-not%20auto-blue.svg)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpedrohserrano%2Fmachine-learning-use-cases.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpedrohserrano%2Fmachine-learning-use-cases?ref=badge_shield)
 
 Disclaimer: All of the data are either totally public or made up, it turns out they are not for any commercial purpose.
 
@@ -38,3 +39,6 @@ To exit the container simply exit the kernel (after save your results) `ctrl + c
 It's possible to run a complete environment with different kernels, more info [here](https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook), note that this environment does not content turicreate.
 
     docker run -it -p 8888:8888 -v "$PWD":/home/jovyan --name=jupyterlab jupyter/datascience-notebook start.sh jupyter lab
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpedrohserrano%2Fmachine-learning-use-cases.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpedrohserrano%2Fmachine-learning-use-cases?ref=badge_large)
